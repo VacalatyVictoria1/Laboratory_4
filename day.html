@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory №4</title>
+    <link rel="stylesheet" id="style">
+    <script>
+        var date = new Date();
+        var day = date.getDay();
+        alert(date);
+        if (day === 0 || day === 5) document.getElementById("style").href = "weekday.css";
+        else document.getElementById("style").href = "weekend.css";
+    </script>
+</head>
+
+<body>
+    <p class="text"> Написать при помощи JavaScript код страницы, </p>
+    <p class="text"> которая при загрузке проверяет день недели</p>
+    <p class="small"> (функция getDay())</p>
+    <p class="text"> и в зависимости от результата </p>
+    <p class="small"> (0 – воскресенье, … 6 - суббота)</p>
+    <p class="text"> использует одну из 2 возможных таблиц стилей  </p>
+    <p class="small"> (weekday.css, weekend.css) </p>
+    <p class="text"> для рабочих и выходных дней соответственно. </p>
+</body>
+</html>

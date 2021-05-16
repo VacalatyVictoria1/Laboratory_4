@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory №4</title>
+    <link rel="stylesheet" id="style"> 
+</head>
+<body>
+    <p class="text"> Написать при помощи JavaScript код страницы, </p>
+    <p class="text"> которая при загрузке проверяет разрешение экрана монитора</p>
+    <p class="small"> (атрибут screen.width возвращает разрешение по горизонтали)</p>
+    <p class="text"> и в зависимости от результата </p>
+    <p class="small"> (640х480, 800х600, 1024х768)</p>
+    <p class="text"> использует одну из 3 возможных таблиц стилей  </p>
+    <p class="small">  (small.css, middle.css, large.css) </p>
+
+    <script>
+        screen.width = document.getElementById("width")
+        alert(screen.width);
+        if (screen.width >= 0 && screen.width <= 640) 
+        {
+            document.getElementById("style").href = "small.css";
+        } 
+        else if (screen.width > 640 && screen.width <= 800) 
+        {
+            document.getElementById("style").href = "middle.css";
+        } else if (screen.width > 800) 
+        {
+            document.getElementById("style").href = "large.css";
+        }
+    </script>
+</body>
+</html>
